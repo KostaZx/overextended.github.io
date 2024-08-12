@@ -50,7 +50,7 @@ It's important for your resources to start in a logical order to prevent errors 
 ```bash
 start oxmysql   # this should be one of the first resources
 start ox_lib
-start framework # the name of your framework (i.e. ox_core, es_extended, qb-core)
+start framework # the name of your framework (i.e. ox_core, es_extended)
 start ox_target
 start ox_inventory
 ```
@@ -62,7 +62,7 @@ Resource configuration is handled using [convars](https://docs.fivem.net/docs/sc
 ```bash
 ### Shared
 
-# Activate specific event handlers and functions (supported: ox, esx, qb, nd)
+# Activate specific event handlers and functions (supported: ox, esx, nd)
 setr inventory:framework "esx"
 
 # Number of slots for player inventories
@@ -226,16 +226,7 @@ end
 - All items in the database will be migrated to the internal item data.
   - Always restart the resource when items are migrated!
 
-## QBCore
-
-<Callout type="warning">Support for QBCore is extremely limited, highly incompatible, and unlikely to improve.</Callout>
-
-- You can use any "version" of qb-core that supports `QBCore.Functions.AddPlayerMethod`.
-- You can convert player and vehicle inventories with `convertinventory qb`.
-- All QB.Shared.Items will be migrated to the internal item data.
-  - Always restart the resource when items are migrated!
-
-### Qbox Project
+## Qbox Project
 
 - [Qbox Project GitHub](https://github.com/Qbox-project/)
 - [Qbox txAdmin Recipe](https://github.com/Qbox-project/txAdminRecipe)
